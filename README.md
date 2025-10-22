@@ -76,7 +76,7 @@ Após executar npm test, o relatório será gerado dentro da pasta mochawesome-r
 ## Sugestão: para executar os testes e abrir o relatório HTML automaticamente, adicione um script no package.json:
 ```
 "scripts": {
-  test:report-open": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome --reporter-options autoOpen=true,overwrite=true"
+  test:report-open": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome --reporter-options autoOpen=true"
 }
 ```
 ```bash
