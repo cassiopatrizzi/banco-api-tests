@@ -76,10 +76,11 @@ Após executar npm test, o relatório será gerado dentro da pasta mochawesome-r
 ## Sugestão: para executar os testes e abrir o relatório HTML automaticamente, adicione um script no package.json:
 ```
 "scripts": {
-  test:report-open": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome --reporter-options autoOpen=true, overwrite=true"
+  test:report-open": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome --reporter-options autoOpen=true,overwrite=true"
 }
 ```
 ```bash
 npm run test:report-open
 ```
-Você pode alterar o overwrite=false para true caso queira que o arquivo seja sobrescrito e também pode adicionar o ## timestamp=true cria um arquivo com nome único (nesse caso o ## overwrite mesmo sendo true será ignorado).
+Caso queira gerar aquivos com nomes únicos, adicione o 'overwrite=false'. Adicionando o 'timestamp=true' além do overwrite, são gerados arquivos únicos com a data e o horário (nesse caso o overwrite mesmo sendo true será ignorado).
+![alt text](mochawesome-report.png)
