@@ -73,10 +73,13 @@ Substitua http://localhost:3000 pela URL onde a API banco-api está rodando.
 4. Geração automática do relatório HTML:
 
 Após executar npm test, o relatório será gerado dentro da pasta mochawesome-report/.
-Sugestão: para executar os testes e abrir o relatório HTML automaticamente, adicione um script no package.json:
+## Sugestão: para executar os testes e abrir o relatório HTML automaticamente, adicione um script no package.json:
 ```
 "scripts": {
-  "test:report": "npm test && open mochawesome-report/mochawesome.html"
+  test:report-open": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome --reporter-options autoOpen=true, overwrite=true"
 }
 ```
-(No Windows PowerShell, substitua open por start).
+```bash
+npm run test:report-open
+```
+Você pode alterar o overwrite=false para true caso queira que o arquivo seja sobrescrito e também pode adicionar o ## timestamp=true cria um arquivo com nome único (nesse caso o ## overwrite mesmo sendo true será ignorado).
