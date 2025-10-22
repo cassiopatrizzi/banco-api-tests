@@ -48,7 +48,8 @@ banco-api-tests/
 
 ## Formato do arquivo .env
 Antes de rodar os testes, crie um arquivo chamado .env na raiz do projeto com o seguinte conteúdo:
-```BASE_URL=http://localhost:3000
+```
+BASE_URL=http://localhost:3000
 ```
 Substitua http://localhost:3000 pela URL onde a API banco-api está rodando.
 
@@ -73,7 +74,8 @@ Substitua http://localhost:3000 pela URL onde a API banco-api está rodando.
 
 Após executar npm test, o relatório será gerado dentro da pasta mochawesome-report/.
 Sugestão: para executar os testes e abrir o relatório HTML automaticamente, adicione um script no package.json:
-```"scripts": {
+```
+"scripts": {
   "test:report": "npm test && open mochawesome-report/mochawesome.html"
 }
 ```
