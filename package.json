@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome",
-    "test:report-open": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome --reporter-options autoOpen=true"
-  },
+  "test:base": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome",
+  "test": "npm run test:base",
+  "test:report-open": "npm run test:base -- --reporter-options autoOpen=true"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
