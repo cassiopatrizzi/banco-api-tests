@@ -86,4 +86,5 @@ Após executar npm test, o relatório será gerado dentro da pasta mochawesome-r
 npm run test:report-open
 ```
 Caso queira gerar aquivos com nomes únicos, adicione o 'overwrite=false'. Adicionando o 'timestamp=true' além do overwrite, são gerados arquivos únicos com a data e o horário (nesse caso o overwrite mesmo sendo true, será ignorado).
+
 ![alt text](mochawesome-report.png)
