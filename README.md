@@ -73,15 +73,17 @@ Substitua http://localhost:3000 pela variável BASE_URL onde a URL estiver defin
 4. Geração automática do relatório HTML:
 
 Após executar npm test, o relatório será gerado dentro da pasta mochawesome-report/.
-## Sugestão: para executar os testes e abrir o relatório HTML automaticamente, adicione um script no package.json:
+## Sugestão: para executar os testes e abrir o relatório HTML automaticamente, adicione um script no package.json
+ * Manter a base limpa e injetar as opções de reporter após o Mocha.
 ```
 "scripts": {
-  test:report-open": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome --reporter-options autoOpen=true"
+  "test:base": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome",
+  "test": "npm run test:base",
+  "test:report-open": "npm run test:base -- --reporter-options autoOpen=true,overwrite=false"
 }
 ```
 ```bash
 npm run test:report-open
 ```
-Caso queira gerar aquivos com nomes únicos, adicione o 'overwrite=false'. Adicionando o 'timestamp=true' além do overwrite, são gerados arquivos únicos com a data e o horário (nesse caso o overwrite mesmo sendo true será ignorado).
-
+Caso queira gerar aquivos com nomes únicos, adicione o 'overwrite=false'. Adicionando o 'timestamp=true' além do overwrite, são gerados arquivos únicos com a data e o horário (nesse caso o overwrite mesmo sendo true, será ignorado).
 ![alt text](mochawesome-report.png)
