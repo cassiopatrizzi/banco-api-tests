@@ -79,7 +79,7 @@ Após executar npm test, o relatório será gerado dentro da pasta mochawesome-r
 "scripts": {
   "test:base": "mocha ./test/**/*.test.js --timeout=200000 --reporter mochawesome",
   "test": "npm run test:base",
-  "test:report-open": "npm run test:base -- --reporter-options autoOpen=true,overwrite=false"
+  "test:report-open": "npm run test:base -- --reporter-options autoOpen=true"
 }
 ```
 ```bash
